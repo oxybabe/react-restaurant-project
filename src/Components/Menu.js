@@ -1,10 +1,10 @@
-const INITIAL_MENU = [
+export const INITIAL_MENU = [
   {
     id: 1,
     title: "Fried Spring Roll",
     tag: "appetizer",
     description:
-      "Ground chicke, tofu, egg, cucumber and bean sprouts rolled in rice paper, served with tamarind sauce",
+      "Ground chicken, tofu, egg, cucumber and bean sprouts rolled in rice paper, served with tamarind sauce",
     imgID: "",
     price: 2.0,
   },
