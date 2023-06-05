@@ -6,7 +6,7 @@ export default function MenuList({ menuItems, order, setOrder }) {
   }
   console.log({ order });
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <header>
         <h1>Majestic Thai Restaurant</h1>
 
@@ -16,24 +16,15 @@ export default function MenuList({ menuItems, order, setOrder }) {
         <>
           <div className="title">{menuItem.title}</div>
           <div>{menuItem.imgID}</div>
-          <div>{menuItem.description}</div>
-          <div>${menuItem.price}</div>
-          <button onClick={() => addToCart(menuItem.id)}>Add to Cart</button>
+          <div className="description">{menuItem.description}</div>
+          <div className="price">${menuItem.price}</div>
+          <button variant="success" onClick={() => addToCart(menuItem.id)}>
+            Add to Cart
+          </button>
+          {/* onClick=localStorage.setItem("order, menuItem")
+        localStorage.getItem("order") */}
         </>
       ))}
-      {/* <section className="fullMenu">
-        <div className="categories">
-          <button className="foodType" type="button">
-            Appetizers
-          </button>
-          <button className="foodType" type="button">
-            Entrees
-          </button>
-          <button className="foodType" type="button">
-            Desserts
-          </button>
-        </div>
-      </section> */}
-    </>
+    </div>
   );
 }

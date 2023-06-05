@@ -1,13 +1,17 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
 
 export default function Cart({ order, setOrder }) {
   function deleteCart() {
     setOrder([]);
   }
   function handleSubmit() {
+    localStorage.setItem("order", JSON.stringify(order));
+
     setOrder([]);
     alert("Thank you! We received your order!");
   }
+
   function deleteItem(id) {
     const index = order.findIndex((menuItem) => menuItem.id === id);
     const updatedOrderList = [...order];
@@ -17,7 +21,7 @@ export default function Cart({ order, setOrder }) {
     setOrder(updatedOrderList);
   }
   const cartTotal = order.reduce((acc, menuItem) => acc + menuItem.price, 0);
-  console.log("cart total: $", cartTotal);
+  console.log("cart total: $", cartTotal.toFixed(2));
 
   return (
     <>
@@ -31,10 +35,14 @@ export default function Cart({ order, setOrder }) {
           </>
         ))}
         <br />
-        <button onClick={deleteCart}>Empty Cart</button>
+        <Button variant="success" onClick={deleteCart}>
+          Empty Cart
+        </Button>
         <br />
-        <div>Subtotal:${cartTotal}</div>
-        <button onClick={handleSubmit}>Submit Order</button>
+        <div>Subtotal:${cartTotal.toFixed(2)}</div>
+        <button variant="success" onClick={handleSubmit}>
+          Submit Order
+        </button>
       </aside>
     </>
   );

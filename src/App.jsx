@@ -11,8 +11,10 @@ function App() {
 
   return (
     <>
-      <MenuList menuItems={menuItems} order={order} setOrder={setOrder} />
-      <Cart order={order} setOrder={setOrder} />
+      <div style={{ display: "flex", maxWidth: "100vw" }}>
+        <MenuList menuItems={menuItems} order={order} setOrder={setOrder} />
+        <Cart order={order} setOrder={setOrder} />
+      </div>
     </>
   );
 }
