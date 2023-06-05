@@ -7,11 +7,18 @@ export default function MenuList({ menuItems, order, setOrder }) {
   console.log({ order });
   return (
     <>
+      <header>
+        <h1>Majestic Thai Restaurant</h1>
+
+        <nav></nav>
+      </header>
       {menuItems.map((menuItem) => (
         <>
-          <div>{menuItem.title}</div>
+          <div className="title">{menuItem.title}</div>
+          <div>{menuItem.imgID}</div>
+          <div>{menuItem.description}</div>
+          <div>${menuItem.price}</div>
           <button onClick={() => addToCart(menuItem.id)}>Add to Cart</button>
-          
         </>
       ))}
       {/* <section className="fullMenu">

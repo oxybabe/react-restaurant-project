@@ -6,7 +6,7 @@ export const INITIAL_MENU = [
     description:
       "Ground chicken, tofu, egg, cucumber and bean sprouts rolled in rice paper, served with tamarind sauce",
     imgID: "",
-    price: 2.0,
+    price: 2.98,
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const INITIAL_MENU = [
     description:
       "Tofu, egg, cucumber, carrot and bean sprouts rolled in rice paper, served with tamarind sauce",
     imgID: "",
-    price: 3.0,
+    price: 3.98,
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const INITIAL_MENU = [
     description:
       "Seasonal vegetables and tofu in a soft dumpling, steamed and served with a spicy basil dipping sauce",
     imgID: "",
-    price: 5.0,
+    price: 5.98,
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const INITIAL_MENU = [
     description:
       "Thai rice noodles stir friend with egg, bean sprouts, green onions, ground peanut",
     imgID: "",
-    price: 9.0,
+    price: 9.98,
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export const INITIAL_MENU = [
     description:
       "Spice red curry with coconut milk, bamboo shoots, bell pepper and basil leaves",
     imgID: "",
-    price: 8.0,
+    price: 8.98,
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const INITIAL_MENU = [
     description:
       "Thai rice noodles with broccoli, carrot, mushroom,in a sweet soy sauce",
     imgID: "",
-    price: 9.0,
+    price: 9.98,
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export const INITIAL_MENU = [
     description:
       "Egg noodles cooked in light tomato sauce with mixed vegetables",
     imgID: "",
-    price: 9.0,
+    price: 9.98,
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export const INITIAL_MENU = [
     description:
       "Mild yellow curry with coconut milk, potatoes, carrots and onions",
     imgID: "",
-    price: 8.0,
+    price: 8.98,
   },
   {
     id: 9,
@@ -77,7 +77,7 @@ export const INITIAL_MENU = [
     tag: "beverage",
     description: "Coke products",
     imgID: "",
-    price: 2.0,
+    price: 2.98,
   },
   {
     id: 10,
@@ -85,7 +85,7 @@ export const INITIAL_MENU = [
     tag: "beverage",
     description: "with tapioca pearls",
     imgID: "",
-    price: 3.0,
+    price: 3.98,
   },
   {
     id: 11,
@@ -93,15 +93,15 @@ export const INITIAL_MENU = [
     tag: "beverage",
     description: "hot or cold",
     imgID: "",
-    price: 2.0,
+    price: 2.98,
   },
   {
     id: 12,
-    title: "Sticy Rice with Mango/Custard",
+    title: "Sticky Rice with Mango/Custard",
     tag: "dessert",
     description: "",
     imgID: "",
-    price: 6.0,
+    price: 6.98,
   },
   {
     id: 13,
@@ -109,7 +109,7 @@ export const INITIAL_MENU = [
     tag: "dessert",
     description: "",
     imgID: "",
-    price: 6.0,
+    price: 6.98,
   },
   {
     id: 14,
@@ -117,6 +117,6 @@ export const INITIAL_MENU = [
     tag: "dessert",
     description: "Thai doughnuts",
     imgID: "",
-    price: 6.0,
+    price: 6.98,
   },
 ];

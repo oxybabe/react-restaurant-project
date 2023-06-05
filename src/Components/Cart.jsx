@@ -6,7 +6,7 @@ export default function Cart({ order, setOrder }) {
   }
   function handleSubmit() {
     setOrder([]);
-    alert("We received your order!");
+    alert("Thank you! We received your order!");
   }
   function deleteItem(id) {
     const index = order.findIndex((menuItem) => menuItem.id === id);
@@ -21,15 +21,21 @@ export default function Cart({ order, setOrder }) {
 
   return (
     <>
-      {order.map((menuItem) => (
-        <>
-          <div>{menuItem.title}</div>
-          <button onClick={() => deleteItem(menuItem.id)}>Delete Item</button>
-        </>
-      ))}
-
-      <button onClick={deleteCart}>Empty Cart</button>
-      <button onClick={handleSubmit}>Submit Order</button>
+      <aside>
+        <h2>Cart</h2>
+        {order.map((menuItem) => (
+          <>
+            <div>{menuItem.title}</div>
+            <div>${menuItem.price}</div>
+            <button onClick={() => deleteItem(menuItem.id)}>Delete Item</button>
+          </>
+        ))}
+        <br />
+        <button onClick={deleteCart}>Empty Cart</button>
+        <br />
+        <div>Subtotal:${cartTotal}</div>
+        <button onClick={handleSubmit}>Submit Order</button>
+      </aside>
     </>
   );
 }

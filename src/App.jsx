@@ -2,6 +2,7 @@ import { useState } from "react";
 import MenuList from "./Components/MenuList";
 import { INITIAL_MENU } from "./Components/Menu";
 import Cart from "./Components/Cart";
+
 import "./App.css";
 
 function App() {
