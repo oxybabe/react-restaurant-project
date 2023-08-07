@@ -1,5 +1,7 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { Button } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
 
 export default function Cart({ order, setOrder }) {
   function deleteCart() {
@@ -26,24 +28,38 @@ export default function Cart({ order, setOrder }) {
   return (
     <>
       <aside>
-        <h2>Cart</h2>
+        <Card style={{
+                width: "18rem",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                backgroundColor: "#efe7da",
+                marginTop: "150px",
+                marginLeft: "30px",
+              }}>
+        <h2 className="title">Cart</h2>
         {order.map((menuItem) => (
           <>
-            <div>{menuItem.title}</div>
-            <div>${menuItem.price}</div>
+            <div className="title">{menuItem.title}</div>
+            <div className="price">${menuItem.price}</div>
             <button onClick={() => deleteItem(menuItem.id)}>Delete Item</button>
           </>
         ))}
+        
         <br />
+        
         <Button variant="success" onClick={deleteCart}>
           Empty Cart
         </Button>
         <br />
         <div>Subtotal:${cartTotal.toFixed(2)}</div>
+        
         <button variant="success" onClick={handleSubmit}>
           Submit Order
         </button>
+        </Card>
       </aside>
     </>
+    
   );
 }
