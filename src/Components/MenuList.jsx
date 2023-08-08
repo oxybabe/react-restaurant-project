@@ -11,7 +11,7 @@ export default function MenuList({ menuItems, order, setOrder }) {
   console.log({ order });
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <header>
+      <header style={{padding:"8em",}}>
         <h1>Majestic Thai Restaurant</h1>
       </header>
 

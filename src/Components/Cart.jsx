@@ -27,39 +27,52 @@ export default function Cart({ order, setOrder }) {
 
   return (
     <>
-      <aside>
-        <Card style={{
-                width: "18rem",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                backgroundColor: "#efe7da",
-                marginTop: "150px",
-                marginLeft: "30px",
-              }}>
-        <h2 className="title">Cart</h2>
-        {order.map((menuItem) => (
-          <>
-            <div className="title">{menuItem.title}</div>
-            <div className="price">${menuItem.price}</div>
-            <button onClick={() => deleteItem(menuItem.id)}>Delete Item</button>
-          </>
-        ))}
-        
-        <br />
-        
-        <Button variant="success" onClick={deleteCart}>
-          Empty Cart
-        </Button>
-        <br />
-        <div>Subtotal:${cartTotal.toFixed(2)}</div>
-        
-        <button variant="success" onClick={handleSubmit}>
-          Submit Order
-        </button>
+      <aside style={{padding:"5em"}}>
+        <Card
+          style={{
+            width: "18rem",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            backgroundColor: "#efe7da",
+            marginTop: "150px",
+            marginLeft: "30px",
+           
+          }}
+        >
+          <h2 className="title" style={{ color: "black" }}>
+            Cart
+          </h2>
+          {order.map((menuItem) => (
+            <>
+              <div className="title" style={{ color: "black" }}>
+                {menuItem.title}
+              </div>
+              <div className="price" style={{ color: "black" }}>
+                ${menuItem.price}
+              </div>
+              <div className="tag" style={{ color: "black" }}>
+                {menuItem.tag}
+              </div>
+              <button onClick={() => deleteItem(menuItem.id)}>
+                Delete Item
+              </button>
+            </>
+          ))}
+
+          <br />
+
+          <Button variant="success" onClick={deleteCart}>
+            Empty Cart
+          </Button>
+          <br />
+          <div>Subtotal:${cartTotal.toFixed(2)}</div>
+
+          <button variant="success" onClick={handleSubmit}>
+            Submit Order
+          </button>
         </Card>
       </aside>
     </>
-    
   );
 }
